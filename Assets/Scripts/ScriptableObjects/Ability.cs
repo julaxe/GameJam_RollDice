@@ -5,7 +5,7 @@ namespace ScriptableObjects
     public abstract class Ability : ScriptableObject
     {
         public string abilityName;
-        public Texture2D image;
+        public Material material;
         public abstract void Execute();
     }
 }

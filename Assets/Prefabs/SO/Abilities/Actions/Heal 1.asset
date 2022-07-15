@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efeda9f66ace49cb9a0e42e30beadb55, type: 3}
   m_Name: Heal 1
   m_EditorClassIdentifier: 
-  abilityName: 
-  image: {fileID: 0}
-  value: 0
+  abilityName: Health Ability
+  material: {fileID: 2100000, guid: d0c69ddf6bed61d4fa78c291fe350e9f, type: 2}
+  value: 20

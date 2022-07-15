@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b84314-2385-4263-a4d1-66df8e288029" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/DiceEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/DiceEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPGRollOfDice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPGRollOfDice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Attack1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Attack1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Defend1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Defend1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Heal 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SO/Abilities/Actions/Heal 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainLevel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DiceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Ability.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Bze1ZyYrlSxo8dHNiN8E1aOjX9" />
   <component name="ProjectViewState">
@@ -39,10 +49,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23420">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23420" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -58,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657913129930</updated>
-      <workItem from="1657913136519" duration="3651000" />
+      <workItem from="1657913136519" duration="7994000" />
     </task>
     <servers />
   </component>
@@ -81,5 +91,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="meshRenderer.materials" language="C#" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
