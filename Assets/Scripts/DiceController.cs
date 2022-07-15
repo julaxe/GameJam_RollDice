@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Pool;
 
 public class DiceController : MonoBehaviour
 {
     [SerializeField] List<Transform> m_RayEndList;
-
+    [SerializeField] private LayerMask layerMask;
     [SerializeField] List<string> m_effectList;
 
     private Rigidbody m_rigidbody;
@@ -47,14 +48,21 @@ public class DiceController : MonoBehaviour
     {
         m_StoppedRolling = true;
         Debug.Log("Stopped");
+        int topFace = 0;
         for (int i = 0; i < m_RayEndList.Count; i++)
         {
-            var hit = Physics.Raycast(transform.position, m_RayEndList[i].position);
-            if (hit)
+            if (m_RayEndList[i].position.y > m_RayEndList[topFace].position.y)
             {
-                Debug.Log("Hit" + i) ;
+                topFace = i;
             }
+            
+            // var hit = Physics.Raycast(transform.position, m_RayEndList[i].position);
+            // if (hit)
+            // {
+            //     Debug.Log("Hit" + i) ;
+            // }
         }
+        Debug.Log("The top face is " + topFace);
 
     }
 
