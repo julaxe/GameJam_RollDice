@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -412,25 +412,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1016872849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 99673233983698397, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
-  m_PrefabInstance: {fileID: 99673233118874188}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1016872856
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016872849}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 089953582641aca4ba4b80279c0a7d6f, type: 3}
 --- !u!1 &1110062697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,41 +985,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 93644bf8b07072b49b84d2256710d928, type: 2}
+      objectReference: {fileID: 2100000, guid: 64e141f2939c4d64185844f670e026db, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 13621f47906484f4ea0bd3b7f1d3c48a, type: 2}
+      objectReference: {fileID: 2100000, guid: d0c69ddf6bed61d4fa78c291fe350e9f, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 37bc936277971784080d48241da66135, type: 2}
+      objectReference: {fileID: 2100000, guid: 64e141f2939c4d64185844f670e026db, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 180613cf4b94a524ea4ef8c8a859d305, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ec2118a941f3aa44bf09583b193200c, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[4]
       value: 
-      objectReference: {fileID: 2100000, guid: c0ac88f072caea041896ab6814c9f212, type: 2}
-    - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
-      propertyPath: m_Materials.Array.data[5]
-      value: 
-      objectReference: {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
+      objectReference: {fileID: 2100000, guid: 7ec2118a941f3aa44bf09583b193200c, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[6]
       value: 
-      objectReference: {fileID: 2100000, guid: b5b9678a61b559e46a5d0cd486068344, type: 2}
-    - target: {fileID: 99673233983698393, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -5495902117074765545, guid: 089953582641aca4ba4b80279c0a7d6f, type: 3}
+      objectReference: {fileID: 2100000, guid: d0c69ddf6bed61d4fa78c291fe350e9f, type: 2}
     - target: {fileID: 99673233983698394, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1087,8 +1056,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dice
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 99673233983698399, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
 --- !u!1001 &8912497551380329777
 PrefabInstance:
