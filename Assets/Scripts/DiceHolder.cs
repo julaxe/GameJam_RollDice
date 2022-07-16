@@ -5,8 +5,8 @@ using UnityEngine;
 public class DiceHolder : MonoBehaviour
 {
     [SerializeField] public  List<GameObject> m_actionDice;
-    [SerializeField] List<GameObject> m_elementDice;
-    [SerializeField] List<GameObject> m_valueDice;
+    [SerializeField] public List<GameObject> m_elementDice;
+    [SerializeField] public List<GameObject> m_valueDice;
 
 
 
