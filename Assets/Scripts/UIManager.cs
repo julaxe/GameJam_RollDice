@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject m_playerDiceInfo;
     [SerializeField] GameObject m_enemyDiceInfo;
+    private GameManager m_gameManager;
+    [SerializeField] List<Image> m_playerDiceSidesImageList;
+
+
     private bool m_playerPanelActive;
     private bool m_enemyPanelActive;
 
     private void Awake()
     {
         m_playerPanelActive = m_enemyPanelActive = false;
+        m_gameManager = GetComponent<GameManager>(); 
     }
     // Start is called before the first frame update
     void Start()

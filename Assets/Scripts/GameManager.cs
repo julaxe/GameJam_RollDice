@@ -36,5 +36,14 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public GameObject GetPlayer()
+    {
+        return m_Player;
+    }
+    public GameObject GetEnemy()
+    {
+        return m_Enemy;
+    }
+
 
 }
