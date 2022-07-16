@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace ScriptableObjects
@@ -5,9 +6,10 @@ namespace ScriptableObjects
     [CreateAssetMenu(menuName = "Ability/Action/Attack")]
     public class AttackAbility : ActionAbility
     {
-        public override void Execute()
+        public override void Execute(PlayerController player, PlayerController enemy)
         {
-            Debug.Log("doing some damage: " + value);
+            player.currentAction = type;
+            player.currentOutcome = value;
         }
     }
 }

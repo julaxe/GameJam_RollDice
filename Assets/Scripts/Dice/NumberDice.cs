@@ -13,8 +13,9 @@ namespace Dice
         
         [SerializeField] private DiceFaces<MultiplyAbility> multiplyAbilities;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             ValidateActionList(multiplyAbilities);
         }
         protected override void OnValidate()

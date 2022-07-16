@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using ScriptableObjects;
 using UnityEngine;
 
@@ -29,13 +30,23 @@ namespace Dice
         [SerializeField] protected MeshRenderer meshRenderer;
         protected List<Ability> AbilityList = new List<Ability>();
         protected DiceRolling DiceRolling;
+        protected int _topFace;
 
+
+        private void Awake()
+        {
+            DiceRolling = GetComponent<DiceRolling>();
+        }
 
         protected virtual void OnValidate()
         {
             DiceRolling = GetComponent<DiceRolling>();
-            DiceRolling.diceStopRollingEvent.AddListener(DiceHaveStoppedRolling);
             meshRenderer = GetComponent<MeshRenderer>();
+        }
+
+        protected virtual void Start()
+        {
+            DiceRolling.diceStopRollingEvent.AddListener(DiceHaveStoppedRolling);
         }
        // public abstract void UpdateMaterials();
         protected void UpdateMaterials<T>(DiceFaces<T> diceFaces)
@@ -71,15 +82,19 @@ namespace Dice
         }
         protected void DiceHaveStoppedRolling()
         {
-            int topFace = 0;
+            _topFace = 0;
             for (int i = 0; i < DiceRolling.facesTransform.Count; i++)
             {
-                if (DiceRolling.facesTransform[i].position.y > DiceRolling.facesTransform[topFace].position.y)
+                if (DiceRolling.facesTransform[i].position.y > DiceRolling.facesTransform[_topFace].position.y)
                 {
-                    topFace = i;
+                    _topFace = i;
                 }
             }
-            AbilityList[topFace].Execute();
+        }
+
+        public void ExecuteTopFace(PlayerController player1, PlayerController enemy)
+        {
+            AbilityList[_topFace].Execute(player1, enemy);
         }
     }
 }

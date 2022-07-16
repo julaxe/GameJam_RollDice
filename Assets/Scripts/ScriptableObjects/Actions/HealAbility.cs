@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace ScriptableObjects.Actions
@@ -5,9 +6,10 @@ namespace ScriptableObjects.Actions
     [CreateAssetMenu(menuName = "Ability/Action/Heal")]
     public class HealAbility : ActionAbility
     {
-        public override void Execute()
+        public override void Execute(PlayerController player, PlayerController enemy)
         {
-            Debug.Log("healing: " + value);
+            player.currentAction = type;
+            player.currentOutcome = value;
         }
     }
 }

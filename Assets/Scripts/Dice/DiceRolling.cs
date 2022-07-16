@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,32 +11,38 @@ namespace Dice
         [Header("Rolling values")]
         [SerializeField] protected float m_VerticalForce;
         [SerializeField] protected float m_TorqueAmount;
-        [SerializeField] protected bool m_StoppedRolling;
         [SerializeField] public Material diceColor;
 
+        private bool _isRolling =false;
         public UnityEvent diceStopRollingEvent;
         public List<Transform> facesTransform;
         private Rigidbody m_rigidbody;
-        
+
         private void Awake()
         {
             m_rigidbody = GetComponent<Rigidbody>();
         }
-        void Update()
+        void LateUpdate()
         {
-            if(Vector3.Magnitude(m_rigidbody.velocity) == 0 && !m_StoppedRolling)
+            if (!_isRolling) return;
+            if(Vector3.Magnitude(m_rigidbody.velocity) == 0.0f)
             {
-                m_StoppedRolling = true;
+                _isRolling = false;
                 diceStopRollingEvent?.Invoke();
             }
         }
         
         public void RollDice()
         {
-            m_StoppedRolling = false;
             m_rigidbody.AddForce(Vector3.up * m_VerticalForce, ForceMode.Impulse);
             m_rigidbody.AddTorque(new Vector3(Random.Range(0, m_TorqueAmount), Random.Range(0, m_TorqueAmount), Random.Range(0, m_TorqueAmount)));
+            StartCoroutine(IsRollingInSeconds(0.2f));
+        }
 
+        IEnumerator IsRollingInSeconds(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            _isRolling = true;
         }
     }
 }

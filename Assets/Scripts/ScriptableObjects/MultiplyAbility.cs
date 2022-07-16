@@ -7,9 +7,18 @@ namespace ScriptableObjects
     public class MultiplyAbility : Ability
     {
         public int factor;
-        public override void Execute()
+        public override void Execute(PlayerController player, PlayerController enemy)
         {
-            Debug.Log("is multiplied by: "+ factor);
+            if (player.currentElement.strongAgainst.Contains(enemy.currentElement))
+            {
+                player.currentOutcome *= 2f; 
+            }
+            if (player.currentElement.weakAgainst.Contains(enemy.currentElement))
+            {
+                player.currentOutcome *= 0.5f; 
+            }
+
+            player.currentOutcome *= factor;
         }
     }
     

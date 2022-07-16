@@ -7,9 +7,9 @@ namespace ScriptableObjects
     public class ElementalAbility : Ability
     {
         public Element element;
-        public override void Execute()
+        public override void Execute(PlayerController player, PlayerController enemy)
         {
-            Debug.Log("the element is " + element.elementName);
+            player.currentElement = element;
         }
     }
     

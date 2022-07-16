@@ -10,8 +10,9 @@ namespace Dice
     public class ActionDice : DiceController
     {
         [SerializeField] private DiceFaces<ActionAbility> actionAbilities;
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             ValidateActionList(actionAbilities);
         }
 

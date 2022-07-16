@@ -13,8 +13,9 @@ namespace Dice
         
         [SerializeField] private DiceFaces<ElementalAbility> elementalAbilities;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             ValidateActionList(elementalAbilities);
         }
         protected override void OnValidate()

@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace ScriptableObjects
@@ -6,6 +7,6 @@ namespace ScriptableObjects
     {
         public string abilityName;
         public Material material;
-        public abstract void Execute();
+        public abstract void Execute(PlayerController player, PlayerController enemy);
     }
 }

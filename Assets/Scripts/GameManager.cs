@@ -10,17 +10,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerController enemy;
 
     [SerializeField] private GameEvents gameEvents;
-    // Start is called before the first frame update
+
+    private bool _outcomeShowed; 
     void Start()
     {
         SpawnDices();
         gameEvents.rollDiceEvent.AddListener(RollDice);
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if (_outcomeShowed) return;
+        if (player.IsOutcomeReady() && enemy.IsOutcomeReady())
+        {
+            Debug.Log("Outcome calculation are here");
+            _outcomeShowed = true;
+        }
     }
 
     public void CurrentTurn()
@@ -35,10 +40,11 @@ public class GameManager : MonoBehaviour
         enemy.SpawnDices();
     }
 
-    public void RollDice()
+    private void RollDice()
     {
         player.RollDices();
         enemy.RollDices();
+        _outcomeShowed = false;
     }
 
 }

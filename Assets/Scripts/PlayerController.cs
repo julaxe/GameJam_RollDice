@@ -15,6 +15,13 @@ namespace DefaultNamespace
         private GameObject _currentActionDice;
         private GameObject _currentElementalDice;
         private GameObject _currentNumberDice;
+        
+        private int _diceCounter = 0;
+        private bool _dicesReadyForOutcome = false;
+
+        [HideInInspector] public float currentOutcome = 0.0f;
+        [HideInInspector] public ActionAbility.ActionType currentAction;
+        [HideInInspector] public Element currentElement;
 
         private void OnValidate()
         {
@@ -27,6 +34,10 @@ namespace DefaultNamespace
             _currentActionDice = Instantiate(playerInfo.actionDices[0], spawnPointActionDice);
             _currentElementalDice = Instantiate(playerInfo.elementalDices[0], spawnPointElementalDice);
             _currentNumberDice = Instantiate(playerInfo.numberDices[0], spawnPointNumberDice);
+            
+            _currentActionDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
+            _currentElementalDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
+            _currentNumberDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
         }
 
         public void RollDices()
@@ -38,7 +49,33 @@ namespace DefaultNamespace
             _currentActionDice.GetComponent<DiceRolling>().RollDice();
             _currentElementalDice.GetComponent<DiceRolling>().RollDice();
             _currentNumberDice.GetComponent<DiceRolling>().RollDice();
+
+            _diceCounter = 0;
+            _dicesReadyForOutcome = false;
+            currentOutcome = 0.0f;
         }
-        
+
+        private void CountStoppingDices()
+        {
+            _diceCounter += 1;
+            if (_diceCounter == 3)
+            {
+                _dicesReadyForOutcome = true;
+            }
+        }
+
+        public bool IsOutcomeReady()
+        {
+            _currentActionDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
+            _currentElementalDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
+            return _dicesReadyForOutcome;
+        }
+
+        public void GetOutcome(PlayerController enemy)
+        {
+            _currentNumberDice.GetComponent<DiceController>().ExecuteTopFace(this, enemy);
+            Debug.Log("outcome: " + currentOutcome);
+        }
+
     }
 }

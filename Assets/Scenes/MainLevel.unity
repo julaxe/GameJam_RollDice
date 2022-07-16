@@ -696,6 +696,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5888841028834046073, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888841029003791227, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888841029019379460, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888841029353825870, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888841029572174725, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888841029975543436, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5888841030245000096, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
       propertyPath: enemy
       value: 
