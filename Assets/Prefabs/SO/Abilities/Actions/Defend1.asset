@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: defend
   material: {fileID: 2100000, guid: 64e141f2939c4d64185844f670e026db, type: 2}
+  type: 1
   value: 10

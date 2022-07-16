@@ -23,6 +23,11 @@ namespace DefaultNamespace
         [HideInInspector] public ActionAbility.ActionType currentAction;
         [HideInInspector] public Element currentElement;
 
+        private void Start()
+        {
+            playerInfo.currentHealth = playerInfo.maxHealth;
+        }
+
         private void OnValidate()
         {
             if(playerInfo.actionDices.Count == 0) Debug.LogWarning("PlayerInfo doesn't have action dices");
@@ -64,6 +69,10 @@ namespace DefaultNamespace
             }
         }
 
+        public void TakeDamage(float damage)
+        {
+            playerInfo.TakeDamage(damage);
+        }
         public bool IsOutcomeReady()
         {
             _currentActionDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
@@ -71,10 +80,11 @@ namespace DefaultNamespace
             return _dicesReadyForOutcome;
         }
 
-        public void GetOutcome(PlayerController enemy)
+        public float CalculateOutcome(PlayerController enemy)
         {
             _currentNumberDice.GetComponent<DiceController>().ExecuteTopFace(this, enemy);
-            Debug.Log("outcome: " + currentOutcome);
+            Debug.Log("this player is " + currentAction + " with the element "+ currentElement.elementName + "for a value of " + currentOutcome);
+            return currentOutcome;
         }
 
     }

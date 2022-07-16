@@ -22,6 +22,7 @@ namespace ScriptableObjects
             currentHealth -= damage;
             TakeDamageAction?.Invoke(damage);
             if (currentHealth < 0) currentHealth = 0;
+            if (currentHealth > maxHealth) currentHealth = maxHealth;
         }
         
     }

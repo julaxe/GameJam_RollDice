@@ -322,6 +322,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1181707936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6328858902200133742, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
+  m_PrefabInstance: {fileID: 6328858901042872157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1181707941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181707936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1cdf235c1a4d8aa0f578d5574d340d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInfo: {fileID: 11400000, guid: dd395b4dd00b9a940be4f0bf29808de2, type: 2}
 --- !u!1 &1254569286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1031748204, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
@@ -337,6 +355,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1832213411, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
   m_PrefabInstance: {fileID: 6328858901042872157}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1820313403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6328858901179532984, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
+  m_PrefabInstance: {fileID: 6328858901042872157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1820313408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820313403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1cdf235c1a4d8aa0f578d5574d340d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInfo: {fileID: 11400000, guid: 111ee4cbfb1b39f42bfb04d6c0567ade, type: 2}
 --- !u!114 &1823867350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5888841030239120830, guid: 2106514b3ddf1804497185a46eb3ea6b, type: 3}
@@ -1189,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DefaultNamespace.CanvasEventManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6328858901179532986, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6328858901272890088, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1327,6 +1367,10 @@ PrefabInstance:
       objectReference: {fileID: 2666867249020100693}
     - target: {fileID: 6328858902152860885, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328858902446525129, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6328858902446525129, guid: f00b0381bb61cd44f94944f4b847c5ed, type: 3}
