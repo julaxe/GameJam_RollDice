@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GrassAbility
   m_EditorClassIdentifier: 
   abilityName: Grass Ability
-  image: {fileID: 0}
+  material: {fileID: 2100000, guid: f6fd64ea0244aac48ac4723d6f21c93a, type: 2}
   element: {fileID: 11400000, guid: 3f2e852a421cec24bbad16d7bc16f171, type: 2}

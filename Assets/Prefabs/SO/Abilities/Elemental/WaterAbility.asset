@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WaterAbility
   m_EditorClassIdentifier: 
   abilityName: Water Ability
-  image: {fileID: 0}
+  material: {fileID: 2100000, guid: 2d342c87dc580154ea77398d9640da52, type: 2}
   element: {fileID: 11400000, guid: 6a422c1917a538842ac64d6ae21c8e06, type: 2}

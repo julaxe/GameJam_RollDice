@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "Ability/Multiplayer")]
-    public class MultiplayerAbility : Ability
+    [CreateAssetMenu(menuName = "Ability/Multiply")]
+    public class MultiplyAbility : Ability
     {
         public int factor;
         public override void Execute()

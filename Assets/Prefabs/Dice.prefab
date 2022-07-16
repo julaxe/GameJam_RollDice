@@ -60,7 +60,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 99673233983698394}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99673233749740789
 GameObject:
@@ -91,7 +91,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 99673233983698394}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99673233983698397
 GameObject:
@@ -105,9 +105,9 @@ GameObject:
   - component: {fileID: 99673233983698393}
   - component: {fileID: 99673233983698392}
   - component: {fileID: 99673233983698395}
-  - component: {fileID: 99673233983698398}
   - component: {fileID: 1016872856}
   - component: {fileID: 9005643403648523765}
+  - component: {fileID: -6554920703297495797}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -127,8 +127,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 99673233749740790}
   - {fileID: 99673233708424787}
+  - {fileID: 99673233749740790}
   - {fileID: 99673234471741037}
   - {fileID: 99673234570839629}
   - {fileID: 99673233165781485}
@@ -164,13 +164,13 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 93644bf8b07072b49b84d2256710d928, type: 2}
-  - {fileID: 2100000, guid: 13621f47906484f4ea0bd3b7f1d3c48a, type: 2}
-  - {fileID: 2100000, guid: 37bc936277971784080d48241da66135, type: 2}
-  - {fileID: 2100000, guid: 180613cf4b94a524ea4ef8c8a859d305, type: 2}
-  - {fileID: 2100000, guid: c0ac88f072caea041896ab6814c9f212, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
-  - {fileID: 2100000, guid: b5b9678a61b559e46a5d0cd486068344, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,37 +208,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &99673233983698398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99673233983698397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfcb8e8e7db36c445a43c43ed3c8d232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RayEndList:
-  - {fileID: 99673233749740790}
-  - {fileID: 99673233708424787}
-  - {fileID: 99673234471741037}
-  - {fileID: 99673234570839629}
-  - {fileID: 99673233165781485}
-  - {fileID: 99673234619217498}
-  actionAbilities:
-  - {fileID: 11400000, guid: ff8cb388ee377b24e9b1386ad869b156, type: 2}
-  - {fileID: 11400000, guid: c4f93ff3744b65740a66a1a6ae113d46, type: 2}
-  - {fileID: 11400000, guid: 958f9853c0764584799b286a5462b562, type: 2}
-  - {fileID: 11400000, guid: ff8cb388ee377b24e9b1386ad869b156, type: 2}
-  - {fileID: 11400000, guid: c4f93ff3744b65740a66a1a6ae113d46, type: 2}
-  - {fileID: 11400000, guid: 958f9853c0764584799b286a5462b562, type: 2}
-  diceColor: {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
-  meshRenderer: {fileID: 99673233983698392}
-  m_VerticalForce: 10
-  m_TorqueAmount: 20
-  m_StoppedRolling: 0
 --- !u!64 &1016872856
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -267,6 +236,31 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 089953582641aca4ba4b80279c0a7d6f, type: 3}
+--- !u!114 &-6554920703297495797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99673233983698397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7ef66b09424effa2b8ee3a061b6df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_VerticalForce: 10
+  m_TorqueAmount: 20
+  m_StoppedRolling: 0
+  diceStopRollingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  facesTransform:
+  - {fileID: 99673233749740790}
+  - {fileID: 99673233708424787}
+  - {fileID: 99673234471741037}
+  - {fileID: 99673234570839629}
+  - {fileID: 99673233165781485}
+  - {fileID: 99673234619217498}
 --- !u!1 &99673234471741036
 GameObject:
   m_ObjectHideFlags: 0

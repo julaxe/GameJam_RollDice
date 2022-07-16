@@ -1,3 +1,4 @@
+using Dice;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,14 +10,14 @@ namespace Editor
         public override void OnInspectorGUI()
         {
 
-            DrawDefaultInspector();
-
-            DiceController myScript = (DiceController) target;
-            if (GUILayout.Button("Update materials"))
-            {
-                myScript.UpdateMaterials();
-            }
-            UnityEditor.SceneView.RepaintAll();
+            // DrawDefaultInspector();
+            //
+            // DiceController myScript = (DiceController) target;
+            // if (GUILayout.Button("Update materials"))
+            // {
+            //     myScript.UpdateMaterials();
+            // }
+            // UnityEditor.SceneView.RepaintAll();
         }
     }
 }
