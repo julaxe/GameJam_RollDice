@@ -42,28 +42,37 @@ public class UIManager : MonoBehaviour
 
     public void OpenDicePanel(int whichButton)
     {
-        //Resetting buttons to not be visable 
-        for (int i = 0; i < m_playerButtonList.Count; i++)
-        {
-            m_playerButtonList[i].SetActive(false);
-            m_enemyButtonList[i].SetActive(false);
-        }
-
         //Toggle control for the player panel
         if(whichButton <= 2 && (whichButton == m_playerLastButtonPressed || m_playerPanelActive == false))
         {
             m_playerPanelActive = !m_playerPanelActive;
-            m_playerLastButtonPressed = whichButton;
         }
-        
+        if (whichButton <= 2)
+        {
+            m_playerLastButtonPressed = whichButton;
+            //Resetting buttons to not be visable 
+            for (int i = 0; i < m_playerButtonList.Count; i++)
+            {
+                m_playerButtonList[i].SetActive(false);
+            }
+        }
+
         //Toggle control for the enemy panel
         if (whichButton >= 3 && (whichButton == m_ememyLastButtonPressed || m_enemyPanelActive == false))
         {
             m_enemyPanelActive = !m_enemyPanelActive;
+        }
+        if (whichButton >= 3)
+        {
             m_ememyLastButtonPressed = whichButton;
+            //Resetting buttons to not be visable 
+            for (int i = 0; i < m_playerButtonList.Count; i++)
+            {
+                m_enemyButtonList[i].SetActive(false);
+            }
         }
 
-        
+        Debug.Log(m_playerLastButtonPressed + "   "+ m_ememyLastButtonPressed);
 
         switch (whichButton)
         {
