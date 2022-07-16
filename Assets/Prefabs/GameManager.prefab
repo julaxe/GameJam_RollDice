@@ -51,6 +51,9 @@ MonoBehaviour:
   spawnPointActionDice: {fileID: 5888841028834046073}
   spawnPointElementalDice: {fileID: 5888841029019379460}
   spawnPointNumberDice: {fileID: 5888841029572174725}
+  currentOutcome: 0
+  currentAction: 0
+  currentElement: {fileID: 0}
 --- !u!1 &5888841028834046072
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +78,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841028834046072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 2, z: 0}
+  m_LocalPosition: {x: 4, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841029003791226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 2, z: 0}
+  m_LocalPosition: {x: 4, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841029019379459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 2.5}
+  m_LocalPosition: {x: 0, y: 1, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841029353825869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 2.5}
+  m_LocalPosition: {x: 0, y: 1, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -199,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841029572174724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 2, z: 0}
+  m_LocalPosition: {x: -4, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888841029975543435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 2, z: 0}
+  m_LocalPosition: {x: -4, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,6 +291,9 @@ MonoBehaviour:
   spawnPointActionDice: {fileID: 5888841029003791227}
   spawnPointElementalDice: {fileID: 5888841029353825870}
   spawnPointNumberDice: {fileID: 5888841029975543436}
+  currentOutcome: 0
+  currentAction: 0
+  currentElement: {fileID: 0}
 --- !u!1 &5888841030245000111
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,9 +341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c17826ce811044dbd93972acd51d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player: {fileID: 5888841028779746870}
-  m_Enemy: {fileID: 5888841030231312388}
-  m_diceSpawnPoints: []
+  player: {fileID: 5888841029961926161}
+  enemy: {fileID: 5888841030239120830}
+  gameEvents: {fileID: 11400000, guid: 7c38cae55bae84543b52996d40a741df, type: 2}
 --- !u!114 &8411527926518156349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,3 +382,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  playerInfo: {fileID: 11400000, guid: dd395b4dd00b9a940be4f0bf29808de2, type: 2}
+  enemyInfo: {fileID: 11400000, guid: 111ee4cbfb1b39f42bfb04d6c0567ade, type: 2}
+  gameEvents: {fileID: 11400000, guid: 7c38cae55bae84543b52996d40a741df, type: 2}
