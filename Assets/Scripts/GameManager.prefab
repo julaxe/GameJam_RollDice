@@ -122,6 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d3e50d7906172418e50ebc01a2f5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerDiceInfo: {fileID: 0}
+  m_enemyDiceInfo: {fileID: 0}
+  m_playerDiceSidesImageList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8912497551423995759
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc17023d9d55374e8366c494dc4829b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_actionDice: []
+  m_actionDice:
+  - {fileID: 0}
   m_elementDice: []
   m_valueDice: []
