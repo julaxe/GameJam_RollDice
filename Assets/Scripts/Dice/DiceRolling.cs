@@ -10,7 +10,7 @@ namespace Dice
         [SerializeField] protected float m_VerticalForce;
         [SerializeField] protected float m_TorqueAmount;
         [SerializeField] protected bool m_StoppedRolling;
-
+        [SerializeField] public Material diceColor;
 
         public UnityEvent diceStopRollingEvent;
         public List<Transform> facesTransform;
@@ -20,12 +20,6 @@ namespace Dice
         {
             m_rigidbody = GetComponent<Rigidbody>();
         }
-        
-        void Start()
-        {
-            RollDice();
-        }
-        
         void Update()
         {
             if(Vector3.Magnitude(m_rigidbody.velocity) == 0 && !m_StoppedRolling)

@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
+using ScriptableObjects;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject m_Player;
-    [SerializeField] GameObject m_Enemy;
-    [SerializeField] List<GameObject> m_diceSpawnPoints;
+    [SerializeField] PlayerController player;
+    [SerializeField] PlayerController enemy;
 
+    [SerializeField] private GameEvents gameEvents;
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnDices();
+        gameEvents.rollDiceEvent.AddListener(RollDice);
     }
 
     // Update is called once per frame
@@ -20,30 +23,22 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void currentTurn()
+    public void CurrentTurn()
     {
 
     }
 
 
-    public void SpawnDice()
+    private void SpawnDices()
     {
-        
+        player.SpawnDices();
+        enemy.SpawnDices();
     }
 
     public void RollDice()
     {
-
+        player.RollDices();
+        enemy.RollDices();
     }
-
-    public GameObject GetPlayer()
-    {
-        return m_Player;
-    }
-    public GameObject GetEnemy()
-    {
-        return m_Enemy;
-    }
-
 
 }

@@ -26,7 +26,6 @@ namespace Dice
             public T zPos;
             public T zNeg;
         }
-        [SerializeField] protected Material diceColor;
         [SerializeField] protected MeshRenderer meshRenderer;
         protected List<Ability> AbilityList = new List<Ability>();
         protected DiceRolling DiceRolling;
@@ -48,7 +47,7 @@ namespace Dice
             newMaterial[2] = (Ability)(object)diceFaces.zPos ? ((Ability)(object)diceFaces.zPos).material: null;
             newMaterial[3] = (Ability)(object)diceFaces.top ? ((Ability)(object)diceFaces.top).material: null;
             newMaterial[4] = (Ability)(object)diceFaces.xNeg ? ((Ability)(object)diceFaces.xNeg).material: null;
-            newMaterial[5] = diceColor;
+            newMaterial[5] = DiceRolling.diceColor;
             newMaterial[6] = (Ability)(object)diceFaces.zNeg ? ((Ability)(object)diceFaces.zNeg).material: null;
 
             meshRenderer.materials = newMaterial;
@@ -72,7 +71,6 @@ namespace Dice
         }
         protected void DiceHaveStoppedRolling()
         {
-            Debug.Log("Stopped");
             int topFace = 0;
             for (int i = 0; i < DiceRolling.facesTransform.Count; i++)
             {
@@ -81,7 +79,6 @@ namespace Dice
                     topFace = i;
                 }
             }
-            Debug.Log("The top face is " + topFace);
             AbilityList[topFace].Execute();
         }
     }

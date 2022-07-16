@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6554920703297495797, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
+      propertyPath: diceColor
+      value: 
+      objectReference: {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -27,6 +31,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: 7ec2118a941f3aa44bf09583b193200c, type: 2}
+    - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
     - target: {fileID: 99673233983698392, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Materials.Array.data[6]
       value: 
@@ -98,7 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2956510a544015ac41d2414ea77726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diceColor: {fileID: 2100000, guid: b4b6bb20544056f45bfaa3065ae55d10, type: 2}
   meshRenderer: {fileID: 5698619011243777452}
   actionAbilities:
     top: {fileID: 11400000, guid: ff8cb388ee377b24e9b1386ad869b156, type: 2}
