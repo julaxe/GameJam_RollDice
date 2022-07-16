@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8912497549969750776}
   - component: {fileID: 8912497549969750777}
+  - component: {fileID: 6822127630618678628}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -109,6 +110,18 @@ MonoBehaviour:
   m_Player: {fileID: 8912497551423995759}
   m_Enemy: {fileID: 8912497549922603357}
   m_diceSpawnPoints: []
+--- !u!114 &6822127630618678628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912497549969750774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d3e50d7906172418e50ebc01a2f5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8912497551423995759
 GameObject:
   m_ObjectHideFlags: 0
