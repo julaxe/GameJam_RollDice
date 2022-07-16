@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class DiceHolder : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] public  List<GameObject> m_actionDice;
-    [SerializeField] public List<GameObject> m_elementDice;
-    [SerializeField] public List<GameObject> m_valueDice;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,4 +16,17 @@ public class DiceHolder : MonoBehaviour
     {
         
     }
+
+    public void ToggleCredits()
+    {
+
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("MainLevel");
+    }
+
+
+
 }
