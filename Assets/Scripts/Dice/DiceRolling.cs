@@ -26,7 +26,7 @@ namespace Dice
         void LateUpdate()
         {
             if (!_isRolling) return;
-            if(Vector3.Magnitude(m_rigidbody.velocity) == 0.0f)
+            if(Vector3.Magnitude(m_rigidbody.velocity) == 0.0f && Vector3.Magnitude(m_rigidbody.angularVelocity) == 0.0f)
             {
                 _isRolling = false;
                 m_rigidbody.useGravity = false;

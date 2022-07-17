@@ -35,7 +35,7 @@ namespace DefaultNamespace
             _camera = Camera.main;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (!_goingToResultPoints) return;
             GoToResultPoint();
@@ -60,6 +60,7 @@ namespace DefaultNamespace
 
         public void RollDices()
         {
+            _goingToResultPoints = false;
             _currentActionDice.transform.SetPositionAndRotation(spawnPointActionDice.position, spawnPointActionDice.rotation);
             _currentElementalDice.transform.SetPositionAndRotation(spawnPointElementalDice.position, spawnPointElementalDice.rotation);
             _currentNumberDice.transform.SetPositionAndRotation(spawnPointNumberDice.position, spawnPointNumberDice.rotation);
@@ -131,7 +132,7 @@ namespace DefaultNamespace
 
         private bool AreDicesInResultPoints()
         {
-            float minimunDistance = 0.5f;
+            float minimunDistance = 1.0f;
             if (Vector3.Distance(_currentActionDice.transform.position, resultPointActionDice.transform.position) <=
                 minimunDistance &&
                 Vector3.Distance(_currentElementalDice.transform.position, resultPointElementalDice.transform.position) <=
