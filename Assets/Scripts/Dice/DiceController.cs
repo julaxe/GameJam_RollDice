@@ -30,7 +30,7 @@ namespace Dice
         [SerializeField] protected MeshRenderer meshRenderer;
         protected List<Ability> AbilityList = new List<Ability>();
         protected DiceRolling DiceRolling;
-        protected int _topFace;
+        protected int _topFace = 0;
 
 
         private void Awake()

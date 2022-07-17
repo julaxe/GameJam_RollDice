@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameEvents gameEvents;
 
-    private bool _outcomeShowed; 
+    private bool _outcomeShowed = true; 
     void Start()
     {
         SpawnDices();
@@ -113,6 +113,7 @@ public class GameManager : MonoBehaviour
 
     private void EndOfRolling()
     {
+        gameEvents.isRolling = false;
         //check if someone won
         if (player.playerInfo.currentHealth == 0.0f || enemy.playerInfo.currentHealth == 0)
         {
@@ -130,6 +131,8 @@ public class GameManager : MonoBehaviour
 
     private void RollDice()
     {
+        if (gameEvents.isRolling) return;
+        gameEvents.isRolling = true;
         player.RollDices();
         enemy.RollDices();
         _outcomeShowed = false;

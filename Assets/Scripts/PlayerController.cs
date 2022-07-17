@@ -94,21 +94,21 @@ namespace DefaultNamespace
                 case 0:
                     Destroy(_currentActionDice.gameObject);
                     _currentActionDice = Instantiate(newDice, spawnPointActionDice);
-                    
+                    _currentActionDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
 
                     break;
                 case 1:
                     Destroy(_currentElementalDice.gameObject);
-
                     _currentElementalDice = Instantiate(newDice, spawnPointElementalDice);
+                    _currentElementalDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
                     
 
                     break;
                 case 2:
 
                     Destroy(_currentNumberDice.gameObject);
-
                     _currentNumberDice = Instantiate(newDice, spawnPointNumberDice);
+                    _currentNumberDice.GetComponent<DiceRolling>().diceStopRollingEvent.AddListener(CountStoppingDices);
                     
                     break;
                
@@ -118,30 +118,6 @@ namespace DefaultNamespace
 
 
         }
-
-        public GameObject GetActionDice()
-        {
-            return _currentActionDice;
-        }
-        public GameObject GetElementalDice()
-        {
-            return _currentElementalDice;
-        }
-        public GameObject GetNumberDice()
-        {
-            return _currentNumberDice;
-        }
-        public Transform GetActionTransfromDice()
-        {
-            return spawnPointActionDice;
-        }
-        public Transform GetElementalTransfromDice()
-        {
-            return spawnPointElementalDice;
-        }
-        public Transform GetNumberTransfromDice()
-        {
-            return spawnPointNumberDice;
-        }
+        
     }
 }
