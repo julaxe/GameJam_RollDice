@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 99673233983698397, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
       propertyPath: m_Name
-      value: Water ElementalDice 1
+      value: Water ElementalDice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ca0de825e1cdab4499a7c066526a750, type: 3}
