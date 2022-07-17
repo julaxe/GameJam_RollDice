@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject creditsRef;
+    [SerializeField] private GameObject mainMenuRef;
+    
+
+    public void MainMenuToCredits()
     {
-        
+        mainMenuRef.SetActive(false);
+        creditsRef.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CreditsToMainMenu()
     {
-        
-    }
-
-    public void ToggleCredits()
-    {
-
+        mainMenuRef.SetActive(true);
+        creditsRef.SetActive(false);
     }
 
     public void PlayGame()
