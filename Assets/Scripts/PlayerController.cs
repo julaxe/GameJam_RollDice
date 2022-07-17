@@ -7,7 +7,7 @@ namespace DefaultNamespace
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private PlayerInfo playerInfo;
+        public PlayerInfo playerInfo;
         [SerializeField] private Transform spawnPointActionDice;
         [SerializeField] private Transform spawnPointElementalDice;
         [SerializeField] private Transform spawnPointNumberDice;

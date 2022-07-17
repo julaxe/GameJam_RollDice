@@ -106,10 +106,19 @@ public class GameManager : MonoBehaviour
                     }
                 }
             #endregion
-    }
-    public void CurrentTurn()
-    {
 
+            EndOfRolling();
+
+    }
+
+    private void EndOfRolling()
+    {
+        //check if someone won
+        if (player.playerInfo.currentHealth == 0.0f || enemy.playerInfo.currentHealth == 0)
+        {
+            gameEvents.GameOver();
+        }
+        //reset the transform?
     }
 
 

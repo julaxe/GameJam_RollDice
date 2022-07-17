@@ -7,6 +7,7 @@ namespace ScriptableObjects
     public class GameEvents : ScriptableObject
     {
         public UnityEvent rollDiceEvent;
+        public UnityEvent gameOverEvent;
         public UnityAction<int> playerChangedDice;
         public UnityAction<int> enemyChangedDice;
         public void RollDice()
@@ -22,6 +23,11 @@ namespace ScriptableObjects
         public void ChangeEnemyDice(int value)
         {
             enemyChangedDice?.Invoke(value);
+        }
+
+        public void GameOver()
+        {
+            gameOverEvent?.Invoke();
         }
     }
 }

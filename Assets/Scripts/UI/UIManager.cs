@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> m_playerButtonList;
     [SerializeField] List<GameObject> m_enemyButtonList;
 
+    [SerializeField] private GameObject _gameOverScreen;
+    
     [SerializeField] private PlayerInfo playerInfo;
     [SerializeField] private PlayerInfo enemyInfo;
     [SerializeField] private GameEvents gameEvents;
@@ -32,6 +35,7 @@ public class UIManager : MonoBehaviour
         m_playerLastButtonPressed = m_ememyLastButtonPressed = -1;
         gameEvents.playerChangedDice += PlayerWhichDiceToLookAt;
         gameEvents.enemyChangedDice += EnemyWhichDiceToLookAt;
+        gameEvents.gameOverEvent.AddListener(ActivateGameOverScreen);
     }
     
     public void OpenDicePanel(int whichButton)
@@ -151,6 +155,27 @@ public class UIManager : MonoBehaviour
         }
 
        
+    }
+
+    private void ActivateGameOverScreen()
+    {
+        _gameOverScreen.SetActive(true);
+
+        string gameOverMessage;
+        if (playerInfo.currentHealth == 0 && enemyInfo.currentHealth == 0)
+        {
+            gameOverMessage = "It's a tie!";
+        }
+        else if (playerInfo.currentHealth == 0)
+        {
+            gameOverMessage = "You lose!";
+        }
+        else
+        {
+            gameOverMessage = "You win!";
+        }
+
+        _gameOverScreen.GetComponent<GameOverUI>().SetMessage(gameOverMessage);
     }
     private void UpdateDicePanel(List<RawImage> diceSideImageList ,List<GameObject> dice, int whichDice)
     {

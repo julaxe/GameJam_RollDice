@@ -73,10 +73,10 @@ namespace Dice
             if ((Ability)(object)diceFaces.zPos) AbilityList.Add((Ability)(object)diceFaces.zPos);
             if ((Ability)(object)diceFaces.zNeg) AbilityList.Add((Ability)(object)diceFaces.zNeg);
             
-            if(AbilityList.Count < 6)
+            if(AbilityList.Count != 6)
             {
-                Debug.Log("Please add all the faces to the dice! There are " 
-                          + (6 - AbilityList.Count) + " missing in " + this.name);
+                Debug.Log("Please check all the faces to the dice! There must be 6 faces in " 
+                     + this.name);
                 enabled = false;
             }
         }

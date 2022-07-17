@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a54bac9b8834629aa81deebe2781a18, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 0
   maxHealth: 100
   actionDices:
   - {fileID: 5698619011243777449, guid: 7393401ab8eb1954281dfcd7ea64e661, type: 3}
