@@ -9,7 +9,7 @@ namespace ScriptableObjects
         public override void Execute(PlayerController player, PlayerController enemy)
         {
             player.currentAction = type;
-            player.currentOutcome = value;
+            CalculateOutcome(player, enemy);
         }
     }
 }

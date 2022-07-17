@@ -75,14 +75,14 @@ namespace DefaultNamespace
         }
         public bool IsOutcomeReady()
         {
-            _currentActionDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
+            _currentNumberDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
             _currentElementalDice.GetComponent<DiceController>().ExecuteTopFace(this, null);
             return _dicesReadyForOutcome;
         }
 
         public float CalculateOutcome(PlayerController enemy)
         {
-            _currentNumberDice.GetComponent<DiceController>().ExecuteTopFace(this, enemy);
+            _currentActionDice.GetComponent<DiceController>().ExecuteTopFace(this, enemy);
             Debug.Log("this player is " + currentAction + " with the element "+ currentElement.elementName + "for a value of " + currentOutcome);
             return currentOutcome;
         }

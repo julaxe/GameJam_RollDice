@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Number2
   material: {fileID: 2100000, guid: 5d6bb05009740fb4bae3a023ed60b241, type: 2}
-  factor: 2
+  value: 2
