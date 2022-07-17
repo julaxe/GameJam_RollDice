@@ -12,12 +12,18 @@ namespace DefaultNamespace
         [SerializeField] private Transform spawnPointElementalDice;
         [SerializeField] private Transform spawnPointNumberDice;
 
+        [SerializeField] private Transform resultPointActionDice;
+        [SerializeField] private Transform resultPointElementalDice;
+        [SerializeField] private Transform resultPointNumberDice;
+
         private GameObject _currentActionDice;
         private GameObject _currentElementalDice;
         private GameObject _currentNumberDice;
         
         private int _diceCounter = 0;
         private bool _dicesReadyForOutcome = false;
+        private bool _goingToResultPoints;
+        private Camera _camera;
 
         [HideInInspector] public float currentOutcome = 0.0f;
         [HideInInspector] public ActionAbility.ActionType currentAction;
@@ -26,6 +32,13 @@ namespace DefaultNamespace
         private void Start()
         {
             playerInfo.currentHealth = playerInfo.maxHealth;
+            _camera = Camera.main;
+        }
+
+        private void Update()
+        {
+            if (!_goingToResultPoints) return;
+            GoToResultPoint();
         }
 
         private void OnValidate()
@@ -84,9 +97,52 @@ namespace DefaultNamespace
         {
             _currentActionDice.GetComponent<DiceController>().ExecuteTopFace(this, enemy);
             Debug.Log("this player is " + currentAction + " with the element "+ currentElement.elementName + "for a value of " + currentOutcome);
+            
+            //transition to showing points
+            _goingToResultPoints = true;
             return currentOutcome;
         }
 
+        private void GoToResultPoint()
+        {
+            _currentActionDice.transform.position = Vector3.Slerp(_currentActionDice.transform.position, resultPointActionDice.transform.position, 0.1f);
+            _currentElementalDice.transform.position = Vector3.Slerp(_currentElementalDice.transform.position, resultPointElementalDice.transform.position, 0.1f);
+            _currentNumberDice.transform.position = Vector3.Slerp(_currentNumberDice.transform.position, resultPointNumberDice.transform.position, 0.1f);
+            
+            // _currentActionDice.transform.LookAt(Camera.main.transform.position, 
+            //     _currentActionDice.GetComponent<DiceController>().GetTopFaceDirection());
+            // _currentElementalDice.transform.LookAt(Camera.main.transform.position, 
+            //     _currentElementalDice.GetComponent<DiceController>().GetTopFaceDirection());
+            // _currentNumberDice.transform.LookAt(Camera.main.transform.position, 
+            //     _currentNumberDice.GetComponent<DiceController>().GetTopFaceDirection());
+
+            if (AreDicesInResultPoints())
+            {
+                _goingToResultPoints = false;
+                _currentActionDice.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                _currentActionDice.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                _currentElementalDice.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                _currentElementalDice.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                _currentNumberDice.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                _currentNumberDice.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            }
+            
+        }
+
+        private bool AreDicesInResultPoints()
+        {
+            float minimunDistance = 0.5f;
+            if (Vector3.Distance(_currentActionDice.transform.position, resultPointActionDice.transform.position) <=
+                minimunDistance &&
+                Vector3.Distance(_currentElementalDice.transform.position, resultPointElementalDice.transform.position) <=
+                minimunDistance &&
+                Vector3.Distance(_currentNumberDice.transform.position, resultPointNumberDice.transform.position) <= minimunDistance)
+            {
+                return true;
+            }
+
+            return false;
+        }
         public void ChangeDice(GameObject newDice, int which )
         {
             switch (which)

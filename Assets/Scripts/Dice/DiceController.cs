@@ -92,6 +92,11 @@ namespace Dice
             }
         }
 
+        public Vector3 GetTopFaceDirection()
+        {
+            var topFaceDirection = DiceRolling.facesTransform[_topFace].position - transform.position;
+            return topFaceDirection;
+        }
         public void ExecuteTopFace(PlayerController player1, PlayerController enemy)
         {
             AbilityList[_topFace].Execute(player1, enemy);
