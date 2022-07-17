@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Number1
   m_EditorClassIdentifier: 
   abilityName: Number1
-  material: {fileID: 2100000, guid: 7667cc1995a0c254d888597638631f2f, type: 2}
+  material: {fileID: 2100000, guid: 7b2f9b60fa790954f86b860a4c5503de, type: 2}
   value: 1

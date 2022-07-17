@@ -16,8 +16,16 @@ MonoBehaviour:
   maxHealth: 100
   actionDices:
   - {fileID: 5698619011243777449, guid: 7393401ab8eb1954281dfcd7ea64e661, type: 3}
+  - {fileID: 5698619011243777449, guid: a670706dbaea41042afa85ae9ae27892, type: 3}
+  - {fileID: 5698619011243777449, guid: a5ea82ba4c953f24db64ac6d7a6d13e9, type: 3}
+  - {fileID: 5698619011243777449, guid: f8c58ebe8a8d4994396ef9537747bece, type: 3}
   elementalDices:
   - {fileID: 1143558200732067134, guid: aa55b92502b7764428eb8e080388c3b4, type: 3}
-  - {fileID: 5698619011243777449, guid: 7393401ab8eb1954281dfcd7ea64e661, type: 3}
+  - {fileID: 1143558200732067134, guid: 831b32ec20e450e45a62f0da004faaff, type: 3}
+  - {fileID: 1143558200732067134, guid: 6339700c762d33b448b385404dd68e4f, type: 3}
+  - {fileID: 1143558200732067134, guid: 423dcdb3d234f8845823824f7b0e7feb, type: 3}
   numberDices:
   - {fileID: 2716015659418037859, guid: b35a0444c7ffea942be0c735688ea1cc, type: 3}
+  - {fileID: 2716015659418037859, guid: 62c763e46a7991c4981075be187e7fdb, type: 3}
+  - {fileID: 2716015659418037859, guid: 187d735dc17172d43869cd4891691879, type: 3}
+  - {fileID: 2716015659418037859, guid: 5aa877517dd103f4c869f8caf7e393cf, type: 3}
