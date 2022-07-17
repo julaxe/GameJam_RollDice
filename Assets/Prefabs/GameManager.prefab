@@ -386,3 +386,5 @@ MonoBehaviour:
   playerInfo: {fileID: 11400000, guid: dd395b4dd00b9a940be4f0bf29808de2, type: 2}
   enemyInfo: {fileID: 11400000, guid: 111ee4cbfb1b39f42bfb04d6c0567ade, type: 2}
   gameEvents: {fileID: 11400000, guid: 7c38cae55bae84543b52996d40a741df, type: 2}
+  player: {fileID: 5888841029961926161}
+  enemy: {fileID: 5888841030239120830}
