@@ -87,5 +87,61 @@ namespace DefaultNamespace
             return currentOutcome;
         }
 
+        public void ChangeDice(GameObject newDice, int which )
+        {
+            switch (which)
+            {
+                case 0:
+                    Destroy(_currentActionDice.gameObject);
+                    _currentActionDice = Instantiate(newDice, spawnPointActionDice);
+                    
+
+                    break;
+                case 1:
+                    Destroy(_currentElementalDice.gameObject);
+
+                    _currentElementalDice = Instantiate(newDice, spawnPointElementalDice);
+                    
+
+                    break;
+                case 2:
+
+                    Destroy(_currentNumberDice.gameObject);
+
+                    _currentNumberDice = Instantiate(newDice, spawnPointNumberDice);
+                    
+                    break;
+               
+                default:
+                    break;
+            }
+
+
+        }
+
+        public GameObject GetActionDice()
+        {
+            return _currentActionDice;
+        }
+        public GameObject GetElementalDice()
+        {
+            return _currentElementalDice;
+        }
+        public GameObject GetNumberDice()
+        {
+            return _currentNumberDice;
+        }
+        public Transform GetActionTransfromDice()
+        {
+            return spawnPointActionDice;
+        }
+        public Transform GetElementalTransfromDice()
+        {
+            return spawnPointElementalDice;
+        }
+        public Transform GetNumberTransfromDice()
+        {
+            return spawnPointNumberDice;
+        }
     }
 }

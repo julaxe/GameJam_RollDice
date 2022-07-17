@@ -4,6 +4,7 @@ using ScriptableObjects;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
+using DefaultNamespace;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,11 +29,15 @@ public class UIManager : MonoBehaviour
     private int m_playerLastButtonPressed;
     private int m_ememyLastButtonPressed;
 
+    [SerializeField] PlayerController player;
+    [SerializeField] PlayerController enemy;
+    private int lastPanelOpen;
 
     private void Awake()
     {
         m_playerPanelActive = m_enemyPanelActive = false;
         m_playerLastButtonPressed = m_ememyLastButtonPressed = -1;
+        lastPanelOpen = 0;
         gameEvents.playerChangedDice += PlayerWhichDiceToLookAt;
         gameEvents.enemyChangedDice += EnemyWhichDiceToLookAt;
         gameEvents.gameOverEvent.AddListener(ActivateGameOverScreen);
@@ -71,7 +76,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        
+        lastPanelOpen = whichButton;
 
         switch (whichButton)
         {
@@ -86,7 +91,7 @@ public class UIManager : MonoBehaviour
                 
                 UpdateDicePanel(m_playerDiceSidesImageList,playerInfo.actionDices, 0);
                 m_currentDiceList = playerInfo.actionDices;
-            
+                
             
             break;
             case 1:
@@ -190,13 +195,15 @@ public class UIManager : MonoBehaviour
         diceSideImageList[5].texture = temp[6].mainTexture;
     }
 
-    private void PlayerWhichDiceToLookAt(int numDice)
+    public void PlayerWhichDiceToLookAt(int numDice)
     {
         UpdateDicePanel(m_playerDiceSidesImageList, m_currentDiceList, numDice);
+        player.ChangeDice(m_currentDiceList[numDice], lastPanelOpen);
     }
-    private void EnemyWhichDiceToLookAt(int numDice)
+    public void EnemyWhichDiceToLookAt(int numDice)
     {
         UpdateDicePanel(m_enemyDiceSidesImageList,m_currentDiceList, numDice);
+        
     }
 
 
