@@ -6,6 +6,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(menuName = "Game/Events")]
     public class GameEvents : ScriptableObject
     {
+        public bool isRolling;
         public UnityEvent rollDiceEvent;
         public UnityEvent gameOverEvent;
         public UnityAction<int> playerChangedDice;

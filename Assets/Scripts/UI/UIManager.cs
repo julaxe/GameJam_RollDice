@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
         gameEvents.playerChangedDice += PlayerWhichDiceToLookAt;
         gameEvents.enemyChangedDice += EnemyWhichDiceToLookAt;
         gameEvents.gameOverEvent.AddListener(ActivateGameOverScreen);
+        gameEvents.isRolling = false;
     }
     
     public void OpenDicePanel(int whichButton)
@@ -198,6 +199,7 @@ public class UIManager : MonoBehaviour
     public void PlayerWhichDiceToLookAt(int numDice)
     {
         UpdateDicePanel(m_playerDiceSidesImageList, m_currentDiceList, numDice);
+        if (gameEvents.isRolling) return;
         player.ChangeDice(m_currentDiceList[numDice], lastPanelOpen);
     }
     public void EnemyWhichDiceToLookAt(int numDice)
